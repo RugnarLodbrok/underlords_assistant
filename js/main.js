@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', main);
 if (IMAGE_B64)  // use local assets when available
     for (let key in IMAGE_B64)
         if (IMAGE_B64.hasOwnProperty(key))
-            IMAGE_DATA[key] = IMG_URL_DATA_PREFIX + IMAGE_B64[key];
+            IMAGE_DATA[key] = ((key === 'LOGO') ? SVG_PREFIX : PNG_PREFIX) + IMAGE_B64[key];
 
 
 function main() {
